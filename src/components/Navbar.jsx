@@ -1,3 +1,4 @@
+import { TiArrowRightOutline } from "react-icons/ti";
 import { Link } from "react-router-dom";
 import "../css/Navbar.css";
 export default function Navbar() {
@@ -25,7 +26,9 @@ export default function Navbar() {
         </div>
       </div>
       <div className="navbar-right">
-        <button>Contact Us</button>
+        <button className="navbar-btn">
+          Contact Us <TiArrowRightOutline />
+        </button>
       </div>
     </nav>
   );

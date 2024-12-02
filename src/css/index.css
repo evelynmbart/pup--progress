@@ -1,9 +1,14 @@
 * {
   margin: 0;
   padding: 0;
-  fill: "Poppins", serif;
+  font-family: "Poppins", serif;
 }
 
 body {
   background-color: white;
+}
+
+button {
+  cursor: pointer;
+  font-family: "Poppins", serif;
 }

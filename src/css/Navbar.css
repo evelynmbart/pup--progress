@@ -4,6 +4,9 @@ nav {
   top: 3%;
   left: 5%;
   right: 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
@@ -15,9 +18,9 @@ nav {
   align-items: center;
   gap: 40px;
   background-color: white;
-  width: 50%;
+  width: 550px;
   border-radius: 100px;
-  padding: 10px;
+  padding: 5px;
 }
 
 .navbar-links {
@@ -29,4 +32,12 @@ nav {
 .link {
   text-decoration: none;
   color: black;
+  font-weight: 500;
+}
+
+.navbar-btn {
+  background-color: white;
+  border: none;
+  border-radius: 100px;
+  padding: 10px;
 }
