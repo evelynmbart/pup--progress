@@ -1,0 +1,7 @@
+.hero-container {
+  background-image: url("../../training7.png");
+  height: 80vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}

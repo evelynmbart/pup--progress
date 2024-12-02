@@ -1,0 +1,32 @@
+nav {
+  background-color: transparent;
+  position: absolute;
+  top: 3%;
+  left: 5%;
+  right: 5%;
+}
+
+.logo {
+  width: 100px;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  background-color: white;
+  width: 50%;
+  border-radius: 100px;
+  padding: 10px;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+}
