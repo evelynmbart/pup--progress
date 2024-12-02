@@ -1,4 +1,4 @@
-import "./Freestyle.css";
+import "../css/Freestyle.css";
 
 export default function Freestyle() {
   return <></>;
