@@ -1,7 +1,15 @@
+import { useState } from "react";
 import { TiArrowRightOutline } from "react-icons/ti";
 import { Link } from "react-router-dom";
 import "../css/Navbar.css";
+
 export default function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <nav className="navbar-container">
       <div className="navbar-left">
@@ -10,17 +18,29 @@ export default function Navbar() {
           src="./pup-progress-logo.png"
           alt="pup progress logo"
         />
-        <div className="navbar-links">
-          <Link className="link" to="/">
+        <div className={`navbar-links ${isMenuOpen ? "active" : ""}`}>
+          <Link className="link" to="/" onClick={() => setIsMenuOpen(false)}>
             Home
           </Link>
-          <Link className="link" to="/chapters">
+          <Link
+            className="link"
+            to="/chapters"
+            onClick={() => setIsMenuOpen(false)}
+          >
             Chapters
           </Link>
-          <Link className="link" to="/freestyle">
+          <Link
+            className="link"
+            to="/freestyle"
+            onClick={() => setIsMenuOpen(false)}
+          >
             Freestyle
           </Link>
-          <Link className="link" to="/about">
+          <Link
+            className="link"
+            to="/about"
+            onClick={() => setIsMenuOpen(false)}
+          >
             About
           </Link>
         </div>
@@ -29,6 +49,14 @@ export default function Navbar() {
         <button className="navbar-btn">Contact Us</button>
         <TiArrowRightOutline className="arrow-icon" size={32} />
       </div>
+      <button
+        className={`hamburger ${isMenuOpen ? "active" : ""}`}
+        onClick={toggleMenu}
+      >
+        <div></div>
+        <div></div>
+        <div></div>
+      </button>
     </nav>
   );
 }
