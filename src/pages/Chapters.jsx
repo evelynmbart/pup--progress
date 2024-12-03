@@ -22,65 +22,68 @@ export default function Chapters() {
 
   return (
     <div className="chapters-container">
-      <h1>
-        Training Guide <span className="paw">🐾</span>
-      </h1>
+      <div className="chapters-content">
+        <h1>
+          <span className="paw">🐾</span> Training Guide
+          <span className="paw">🐾</span>
+        </h1>
 
-      <div className="chapters-grid">
-        {chapters.map((chapter) => (
-          <div
-            key={chapter.number}
-            className={`chapter-card ${
-              selectedChapter === chapter.number ? "selected" : ""
-            }`}
-            onClick={() => {
-              setSelectedChapter(chapter.number);
-              setSelectedTrick(null);
-            }}
-          >
-            <div className="chapter-emoji">{chapter.emoji}</div>
-            <h2>Chapter {chapter.number}</h2>
-            <h3>{chapter.title}</h3>
-          </div>
-        ))}
-      </div>
-
-      {selectedChapter && (
-        <div className="tricks-container">
-          <h2>
-            Chapter {selectedChapter} - {chapters[selectedChapter - 1].title}
-          </h2>
-          <div className="tricks-grid">
-            {chapters[selectedChapter - 1].data.map((trick) => (
-              <div
-                key={trick.id}
-                className={`trick-card ${
-                  selectedTrick?.id === trick.id ? "selected" : ""
-                }`}
-                onClick={() => setSelectedTrick(trick)}
-              >
-                <h3>{trick.name}</h3>
-                <p>{trick.description}</p>
-              </div>
-            ))}
-          </div>
+        <div className="chapters-grid">
+          {chapters.map((chapter) => (
+            <div
+              key={chapter.number}
+              className={`chapter-card ${
+                selectedChapter === chapter.number ? "selected" : ""
+              }`}
+              onClick={() => {
+                setSelectedChapter(chapter.number);
+                setSelectedTrick(null);
+              }}
+            >
+              <div className="chapter-emoji">{chapter.emoji}</div>
+              <h2>Chapter {chapter.number}</h2>
+              <h3>{chapter.title}</h3>
+            </div>
+          ))}
         </div>
-      )}
 
-      {selectedTrick && (
-        <div className="trick-details">
-          <h2>{selectedTrick.name}</h2>
-          <p className="trick-description">{selectedTrick.description}</p>
-          <div className="instructions">
-            <h3>How to train this trick:</h3>
-            <ol>
-              {selectedTrick.instructions.map((instruction, index) => (
-                <li key={index}>{instruction}</li>
+        {selectedChapter && (
+          <div className="tricks-container">
+            <h2>
+              Chapter {selectedChapter} - {chapters[selectedChapter - 1].title}
+            </h2>
+            <div className="tricks-grid">
+              {chapters[selectedChapter - 1].data.map((trick) => (
+                <div
+                  key={trick.id}
+                  className={`trick-card ${
+                    selectedTrick?.id === trick.id ? "selected" : ""
+                  }`}
+                  onClick={() => setSelectedTrick(trick)}
+                >
+                  <h3>{trick.name}</h3>
+                  <p>{trick.description}</p>
+                </div>
               ))}
-            </ol>
+            </div>
           </div>
-        </div>
-      )}
+        )}
+
+        {selectedTrick && (
+          <div className="trick-details">
+            <h2>{selectedTrick.name}</h2>
+            <p className="trick-description">{selectedTrick.description}</p>
+            <div className="instructions">
+              <h3>How to train this trick:</h3>
+              <ol>
+                {selectedTrick.instructions.map((instruction, index) => (
+                  <li key={index}>{instruction}</li>
+                ))}
+              </ol>
+            </div>
+          </div>
+        )}
+      </div>
     </div>
   );
 }

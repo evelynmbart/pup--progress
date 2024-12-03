@@ -1,8 +1,22 @@
 .chapters-container {
-  max-width: 1200px;
-  margin: 0 auto;
+  margin: 0;
   padding: 2rem;
-  margin-top: 120px;
+  padding-top: 150px;
+  background-color: rgb(150, 222, 222);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.chapters-content {
+  width: 100%;
+  max-width: 1500px;
+  padding: 2rem;
+  border-radius: 10px;
+  background-color: rgb(150, 222, 222);
+  height: 100%;
 }
 
 .chapters-container h1 {
@@ -120,6 +134,8 @@
 @media (max-width: 768px) {
   .chapters-container {
     padding: 1rem;
+    padding-top: 120px;
+    min-height: 100vh;
   }
 
   .chapters-grid {
