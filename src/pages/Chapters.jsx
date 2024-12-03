@@ -106,7 +106,7 @@ export default function Chapters() {
                   setCompletedTricks([...completedTricks, selectedTrick.id]);
                   setTimeout(() => {
                     setIsExploding(false);
-                  }, 7300);
+                  }, 7150);
                 }
               }}
             >
