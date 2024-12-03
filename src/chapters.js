@@ -1,4 +1,4 @@
-const CHAPTER_ONE = [
+export const CHAPTER_ONE = [
     {
         id: 1,
         name: "Sit",
@@ -46,7 +46,7 @@ const CHAPTER_ONE = [
 ];
 
 
-const CHAPTER_TWO = [
+export const CHAPTER_TWO = [
     {
         id: 1,
         name: "Shake Hands",
@@ -94,7 +94,7 @@ const CHAPTER_TWO = [
 ];
 
 
-const CHAPTER_THREE = [
+export const CHAPTER_THREE = [
     {
         id: 1,
         name: "Spin",
@@ -142,7 +142,7 @@ const CHAPTER_THREE = [
 ];
 
 
-const CHAPTER_FOUR = [
+export const CHAPTER_FOUR = [
     {
         id: 1,
         name: "Play Dead",
@@ -189,7 +189,7 @@ const CHAPTER_FOUR = [
 ];
 
 
-const CHAPTER_FIVE = [
+export const CHAPTER_FIVE = [
     {
         id: 1,
         name: "Jump Through Hoops",
