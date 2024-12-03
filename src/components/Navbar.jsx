@@ -26,9 +26,8 @@ export default function Navbar() {
         </div>
       </div>
       <div className="navbar-right">
-        <button className="navbar-btn">
-          Contact Us <TiArrowRightOutline />
-        </button>
+        <button className="navbar-btn">Contact Us</button>
+        <TiArrowRightOutline className="arrow-icon" size={32} />
       </div>
     </nav>
   );

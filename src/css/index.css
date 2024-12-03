@@ -11,4 +11,5 @@ body {
 button {
   cursor: pointer;
   font-family: "Poppins", serif;
+  font-weight: 500;
 }
