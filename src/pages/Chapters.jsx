@@ -1,4 +1,6 @@
 import { useState } from "react";
+import Confetti from "react-confetti";
+
 import {
   CHAPTER_FIVE,
   CHAPTER_FOUR,
@@ -11,6 +13,8 @@ import "../css/Chapters.css";
 export default function Chapters() {
   const [selectedChapter, setSelectedChapter] = useState(null);
   const [selectedTrick, setSelectedTrick] = useState(null);
+  const [completedTricks, setCompletedTricks] = useState([]);
+  const [isExploding, setIsExploding] = useState(false);
 
   const chapters = [
     { number: 1, title: "Basic Commands", data: CHAPTER_ONE, emoji: "🦮" },
@@ -19,6 +23,11 @@ export default function Chapters() {
     { number: 4, title: "Show Stoppers", data: CHAPTER_FOUR, emoji: "🎾" },
     { number: 5, title: "Expert Level", data: CHAPTER_FIVE, emoji: "🏆" },
   ];
+
+  //  i want to make the chapters be locked until user has completed the previous chapter
+  //  i need a button on each trick that will allow the user to mark the trick as completed
+  //  i need to store the completed tricks in local storage
+  //  i need to make the trick instructions be locked until the user has completed the previous chapter
 
   return (
     <div className="chapters-container">
@@ -61,7 +70,11 @@ export default function Chapters() {
                   }`}
                   onClick={() => setSelectedTrick(trick)}
                 >
-                  <h3>{trick.name}</h3>
+                  <h3>
+                    {completedTricks.includes(trick.id)
+                      ? `${trick.name} 🏆`
+                      : trick.name}
+                  </h3>
                   <p>{trick.description}</p>
                 </div>
               ))}
@@ -81,6 +94,24 @@ export default function Chapters() {
                 ))}
               </ol>
             </div>
+            <button
+              className="complete-btn"
+              onClick={() => {
+                if (completedTricks.includes(selectedTrick.id)) {
+                  setCompletedTricks(
+                    completedTricks.filter((id) => id !== selectedTrick.id)
+                  );
+                } else {
+                  setIsExploding(true);
+                  setCompletedTricks([...completedTricks, selectedTrick.id]);
+                }
+              }}
+            >
+              {isExploding && <Confetti width={2600} />}
+              {completedTricks.includes(selectedTrick.id)
+                ? "Mark as incomplete"
+                : "Mark as completed"}
+            </button>
           </div>
         )}
       </div>
