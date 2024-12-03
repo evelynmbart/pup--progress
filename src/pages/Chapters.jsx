@@ -24,6 +24,10 @@ export default function Chapters() {
     { number: 5, title: "Expert Level", data: CHAPTER_FIVE, emoji: "🏆" },
   ];
 
+  const isCompleted = (chapterId, trickId) => {
+    return completedTricks.includes(`${chapterId}-${trickId}`);
+  };
+
   //  i want to make the chapters be locked until user has completed the previous chapter
   //  i need a button on each trick that will allow the user to mark the trick as completed
   //  i need to store the completed tricks in local storage
@@ -71,7 +75,7 @@ export default function Chapters() {
                   onClick={() => setSelectedTrick(trick)}
                 >
                   <h3>
-                    {completedTricks.includes(trick.id)
+                    {isCompleted(selectedChapter, trick.id)
                       ? `${trick.name} 🏆`
                       : trick.name}
                   </h3>
@@ -97,13 +101,14 @@ export default function Chapters() {
             <button
               className="complete-btn"
               onClick={() => {
-                if (completedTricks.includes(selectedTrick.id)) {
+                const completionId = `${selectedChapter}-${selectedTrick.id}`;
+                if (isCompleted(selectedChapter, selectedTrick.id)) {
                   setCompletedTricks(
-                    completedTricks.filter((id) => id !== selectedTrick.id)
+                    completedTricks.filter((id) => id !== completionId)
                   );
                 } else {
                   setIsExploding(true);
-                  setCompletedTricks([...completedTricks, selectedTrick.id]);
+                  setCompletedTricks([...completedTricks, completionId]);
                   setTimeout(() => {
                     setIsExploding(false);
                   }, 7150);
@@ -111,7 +116,7 @@ export default function Chapters() {
               }}
             >
               {isExploding && <Confetti width={2600} height={2600} />}
-              {completedTricks.includes(selectedTrick.id)
+              {isCompleted(selectedChapter, selectedTrick.id)
                 ? "Mark as incomplete"
                 : "Mark as completed"}
             </button>
