@@ -71,13 +71,13 @@ export const CHAPTER_TWO = [
     },
     {
         id: 3,
-        name: "Roll Over",
-        description: "Teach your dog to roll over on command.",
+        name: "Spin",
+        description: "Teach your dog to spin in a circle on command.",
         instructions: [
-            "Start with your dog in a 'Down' position.",
-            "Hold a treat near their nose, then move it towards their shoulder, guiding their body to roll over.",
-            "Once they complete the roll, say 'Roll Over' and reward them immediately.",
-            "Repeat until your dog associates the action with the command."
+            "Hold a treat close to your dog's nose.",
+            "Slowly move the treat in a circle around their body, encouraging them to follow it.",
+            "Once they complete a full circle, say 'Spin' and reward them immediately.",
+            "Repeat the process until your dog associates the command with the action."
         ]
     },
     {
@@ -97,13 +97,13 @@ export const CHAPTER_TWO = [
 export const CHAPTER_THREE = [
     {
         id: 1,
-        name: "Spin",
-        description: "Teach your dog to spin in a circle on command.",
+        name: "High Five",
+        description: "Teach your dog to give you a high five with their paw.",
         instructions: [
-            "Hold a treat close to your dog's nose.",
-            "Slowly move the treat in a circle around their body, encouraging them to follow it.",
-            "Once they complete a full circle, say 'Spin' and reward them immediately.",
-            "Repeat the process until your dog associates the command with the action."
+            "Start with your dog in a 'Sit' position.",
+            "Hold a treat in your hand and allow your dog to sniff it.",
+            "Raise your hand slightly and encourage them to lift their paw to touch your hand.",
+            "When they do, say 'High Five' and reward them immediately."
         ]
     },
     {
@@ -119,13 +119,13 @@ export const CHAPTER_THREE = [
     },
     {
         id: 3,
-        name: "High Five",
-        description: "Teach your dog to give you a high five with their paw.",
+        name: "Roll Over",
+        description: "Teach your dog to roll over on command.",
         instructions: [
-            "Start with your dog in a 'Sit' position.",
-            "Hold a treat in your hand and allow your dog to sniff it.",
-            "Raise your hand slightly and encourage them to lift their paw to touch your hand.",
-            "When they do, say 'High Five' and reward them immediately."
+            "Start with your dog in a 'Down' position.",
+            "Hold a treat near their nose, then move it towards their shoulder, guiding their body to roll over.",
+            "Once they complete the roll, say 'Roll Over' and reward them immediately.",
+            "Repeat until your dog associates the action with the command."
         ]
     },
     {
