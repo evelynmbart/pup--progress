@@ -16,17 +16,19 @@ nav {
 .navbar-left {
   display: flex;
   align-items: center;
-  gap: 40px;
-  background-color: white;
-  width: 550px;
+  gap: 20px;
+  width: 450px;
   border-radius: 100px;
   padding: 10px;
 }
 
 .navbar-links {
   display: flex;
+  background-color: white;
+  padding: 1rem 2rem;
+  border-radius: 100px;
   align-items: center;
-  gap: 40px;
+  gap: 50px;
 }
 
 .link {
