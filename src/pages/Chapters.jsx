@@ -5,6 +5,7 @@ import {
   CHAPTER_FIVE,
   CHAPTER_FOUR,
   CHAPTER_ONE,
+  CHAPTER_SIX,
   CHAPTER_THREE,
   CHAPTER_TWO,
 } from "../chapters";
@@ -19,6 +20,7 @@ export default function Chapters() {
     return saved ? JSON.parse(saved) : [];
   });
   const [isExploding, setIsExploding] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     localStorage.setItem("completedTricks", JSON.stringify(completedTricks));
@@ -30,6 +32,7 @@ export default function Chapters() {
     { number: 3, title: "Advanced Tricks", data: CHAPTER_THREE, emoji: "🐕" },
     { number: 4, title: "Show Stoppers", data: CHAPTER_FOUR, emoji: "🎾" },
     { number: 5, title: "Expert Level", data: CHAPTER_FIVE, emoji: "🏆" },
+    { number: 6, title: "Out of this World", data: CHAPTER_SIX, emoji: "🌟" },
   ];
 
   const isCompleted = (chapterId, trickId) => {
@@ -90,7 +93,10 @@ export default function Chapters() {
                   className={`trick-card ${
                     selectedTrick?.id === trick.id ? "selected" : ""
                   }`}
-                  onClick={() => setSelectedTrick(trick)}
+                  onClick={() => {
+                    setSelectedTrick(trick);
+                    setShowModal(true);
+                  }}
                 >
                   <h3>
                     {isCompleted(selectedChapter, trick.id)
@@ -104,40 +110,48 @@ export default function Chapters() {
           </div>
         )}
 
-        {selectedTrick && (
-          <div className="trick-details">
-            <h2>{selectedTrick.name}</h2>
-            <p className="trick-description">{selectedTrick.description}</p>
-            <div className="instructions">
-              <h3>How to train this trick:</h3>
-              <ol>
-                {selectedTrick.instructions.map((instruction, index) => (
-                  <li key={index}>{instruction}</li>
-                ))}
-              </ol>
+        {showModal && selectedTrick && (
+          <div className="modal-overlay" onClick={() => setShowModal(false)}>
+            <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+              <button
+                className="close-button"
+                onClick={() => setShowModal(false)}
+              >
+                ✕
+              </button>
+              <h2>{selectedTrick.name}</h2>
+              <p className="trick-description">{selectedTrick.description}</p>
+              <div className="instructions">
+                <h3>How to train this trick:</h3>
+                <ol>
+                  {selectedTrick.instructions.map((instruction, index) => (
+                    <li key={index}>{instruction}</li>
+                  ))}
+                </ol>
+              </div>
+              <button
+                className="complete-btn"
+                onClick={() => {
+                  const completionId = `${selectedChapter}-${selectedTrick.id}`;
+                  if (isCompleted(selectedChapter, selectedTrick.id)) {
+                    setCompletedTricks(
+                      completedTricks.filter((id) => id !== completionId)
+                    );
+                  } else {
+                    setIsExploding(true);
+                    setCompletedTricks([...completedTricks, completionId]);
+                    setTimeout(() => {
+                      setIsExploding(false);
+                    }, 5900);
+                  }
+                }}
+              >
+                {isExploding && <Confetti width={2600} height={1186} />}
+                {isCompleted(selectedChapter, selectedTrick.id)
+                  ? "Mark as incomplete"
+                  : "Mark as completed"}
+              </button>
             </div>
-            <button
-              className="complete-btn"
-              onClick={() => {
-                const completionId = `${selectedChapter}-${selectedTrick.id}`;
-                if (isCompleted(selectedChapter, selectedTrick.id)) {
-                  setCompletedTricks(
-                    completedTricks.filter((id) => id !== completionId)
-                  );
-                } else {
-                  setIsExploding(true);
-                  setCompletedTricks([...completedTricks, completionId]);
-                  setTimeout(() => {
-                    setIsExploding(false);
-                  }, 5900);
-                }
-              }}
-            >
-              {isExploding && <Confetti width={2600} height={1186} />}
-              {isCompleted(selectedChapter, selectedTrick.id)
-                ? "Mark as incomplete"
-                : "Mark as completed"}
-            </button>
           </div>
         )}
       </div>

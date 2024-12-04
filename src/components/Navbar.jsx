@@ -36,13 +36,6 @@ export default function Navbar() {
           >
             Freestyle
           </Link>
-          <Link
-            className="link"
-            to="/about"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            About
-          </Link>
         </div>
       </div>
       <div className="navbar-right">
