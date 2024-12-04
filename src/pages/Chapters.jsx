@@ -129,11 +129,11 @@ export default function Chapters() {
                   setCompletedTricks([...completedTricks, completionId]);
                   setTimeout(() => {
                     setIsExploding(false);
-                  }, 7150);
+                  }, 5900);
                 }
               }}
             >
-              {isExploding && <Confetti width={2600} height={2600} />}
+              {isExploding && <Confetti width={2600} height={1186} />}
               {isCompleted(selectedChapter, selectedTrick.id)
                 ? "Mark as incomplete"
                 : "Mark as completed"}
