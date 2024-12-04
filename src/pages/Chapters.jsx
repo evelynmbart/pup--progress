@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Confetti from "react-confetti";
 
 import {
@@ -13,8 +13,15 @@ import "../css/Chapters.css";
 export default function Chapters() {
   const [selectedChapter, setSelectedChapter] = useState(null);
   const [selectedTrick, setSelectedTrick] = useState(null);
-  const [completedTricks, setCompletedTricks] = useState([]);
+  const [completedTricks, setCompletedTricks] = useState(() => {
+    const saved = localStorage.getItem("completedTricks");
+    return saved ? JSON.parse(saved) : [];
+  });
   const [isExploding, setIsExploding] = useState(false);
+
+  useEffect(() => {
+    localStorage.setItem("completedTricks", JSON.stringify(completedTricks));
+  }, [completedTricks]);
 
   const chapters = [
     { number: 1, title: "Basic Commands", data: CHAPTER_ONE, emoji: "🦮" },
