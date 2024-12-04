@@ -13,6 +13,7 @@ import "../css/Chapters.css";
 export default function Chapters() {
   const [selectedChapter, setSelectedChapter] = useState(null);
   const [selectedTrick, setSelectedTrick] = useState(null);
+  const [isLocked, setIsLocked] = useState(true);
   const [completedTricks, setCompletedTricks] = useState(() => {
     const saved = localStorage.getItem("completedTricks");
     return saved ? JSON.parse(saved) : [];
@@ -35,10 +36,16 @@ export default function Chapters() {
     return completedTricks.includes(`${chapterId}-${trickId}`);
   };
 
-  //  i want to make the chapters be locked until user has completed the previous chapter
-  //  i need a button on each trick that will allow the user to mark the trick as completed
-  //  i need to store the completed tricks in local storage
-  //  i need to make the trick instructions be locked until the user has completed the previous chapter
+  const isChapterLocked = (chapterNumber) => {
+    if (chapterNumber === 1) return false;
+
+    const previousChapter = chapters[chapterNumber - 2];
+    const previousChapterTricks = previousChapter.data;
+
+    return !previousChapterTricks.every((trick) =>
+      isCompleted(chapterNumber - 1, trick.id)
+    );
+  };
 
   return (
     <div className="chapters-container">
@@ -54,13 +61,17 @@ export default function Chapters() {
               key={chapter.number}
               className={`chapter-card ${
                 selectedChapter === chapter.number ? "selected" : ""
-              }`}
+              } ${isChapterLocked(chapter.number) ? "locked" : ""}`}
               onClick={() => {
-                setSelectedChapter(chapter.number);
-                setSelectedTrick(null);
+                if (!isChapterLocked(chapter.number)) {
+                  setSelectedChapter(chapter.number);
+                  setSelectedTrick(null);
+                }
               }}
             >
-              <div className="chapter-emoji">{chapter.emoji}</div>
+              <div className="chapter-emoji">
+                {isChapterLocked(chapter.number) ? "🔒" : chapter.emoji}
+              </div>
               <h2>Chapter {chapter.number}</h2>
               <h3>{chapter.title}</h3>
             </div>
