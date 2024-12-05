@@ -105,6 +105,7 @@ h1 {
   right: 3px;
   color: rgb(150, 222, 222);
   position: absolute;
+  cursor: pointer;
 }
 
 #circle-plus-1 {
