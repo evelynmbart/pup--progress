@@ -47,11 +47,13 @@ export default function WhyChapters() {
             </div>
           </div>
           <div className="right-bottom">
-            <h4>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-              quos.
-            </h4>
-            <Bullet>Read More</Bullet>
+            <div className="right-bottom-text">
+              <h4>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Quisquam, quos.
+              </h4>
+              <Bullet>Read More</Bullet>
+            </div>
           </div>
         </div>
       </div>
