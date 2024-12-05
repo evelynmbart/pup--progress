@@ -37,7 +37,13 @@ h1 {
   flex-direction: column;
   height: 500px;
   width: 50%;
-  background-color: violet;
+}
+
+.left-bottom span {
+  display: flex;
+  align-items: center;
+  margin-top: 35px;
+  gap: 20px;
 }
 
 .right {

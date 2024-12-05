@@ -26,7 +26,13 @@ export default function WhyChapters() {
             </div>
           </div>
 
-          <div className="left-bottom"></div>
+          <div className="left-bottom">
+            <span>
+              <Arrow />
+              <p>01 / 12</p>
+              <Arrow />
+            </span>
+          </div>
         </div>
         <div className="right"></div>
       </div>
