@@ -1,4 +1,5 @@
 import "../css/WhyChapters.css";
+import Arrow from "./Arrow";
 import Bullet from "./Bullet";
 export default function WhyChapters() {
   return (
@@ -19,6 +20,9 @@ export default function WhyChapters() {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Quisquam, quos.
               </p>
+            </div>
+            <div className="left-arrow">
+              <Arrow />
             </div>
           </div>
 
