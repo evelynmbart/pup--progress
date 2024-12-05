@@ -9,6 +9,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   padding-top: 30px;
   width: 50%;
   height: 500px;
@@ -22,4 +23,37 @@
   display: flex;
   gap: 10px;
   margin-top: 20px;
+}
+
+.freestyle-left h1 {
+  font-size: 2.5rem;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 20px;
+  width: 80%;
+  font-family: "Poppins", sans-serif;
+}
+
+.freestyle-left-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.freestyle-left-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 175px;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+.freestyle-left-bottom p {
+  width: 75%;
+  text-align: center;
+  margin-top: 10px;
 }

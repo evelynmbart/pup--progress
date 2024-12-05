@@ -6,13 +6,23 @@ export default function WhyFreestyle() {
   return (
     <div className="why-freestyle-container">
       <div className="freestyle-left">
-        <Bullet>Training Benefits</Bullet>
-        <span>
-          <Button>Benefits</Button>
-          <Button>Perks</Button>
-          <Button>Advantages</Button>
-          <Button>Extras</Button>
-        </span>
+        <div className="freestyle-left-top">
+          <Bullet>Training Benefits</Bullet>
+          <span>
+            <Button>Benefits</Button>
+            <Button>Perks</Button>
+            <Button>Advantages</Button>
+            <Button>Extras</Button>
+          </span>
+          <h1>Why Choose Freestyle?</h1>
+        </div>
+        <div className="freestyle-left-bottom">
+          <h5>Strengthens your Bond</h5>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+            quos. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </p>
+        </div>
       </div>
       <div className="freestyle-right"></div>
     </div>

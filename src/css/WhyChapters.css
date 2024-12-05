@@ -1,5 +1,4 @@
 .why-chapters-container {
-  background-color: rgba(253, 244, 244, 0.866);
   margin: 4%;
 }
 
@@ -154,7 +153,7 @@ h3 {
   gap: 10px;
   justify-content: center;
   gap: 20px;
-  background-color: rgba(255, 255, 255, 0.457);
+  /* background-color: rgba(255, 255, 255, 0.457); */
   padding: 20px;
   border-radius: 20px;
 }
