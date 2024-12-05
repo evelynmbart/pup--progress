@@ -1,16 +1,16 @@
 nav {
   background-color: transparent;
   position: absolute;
-  top: 3%;
-  left: 5%;
-  right: 5%;
+  top: 1%;
+  left: 2%;
+  right: 2%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .logo {
-  width: 100px;
+  width: 150px;
 }
 
 .navbar-left {
@@ -46,11 +46,13 @@ nav {
   gap: 20px;
   background-color: white;
   border-radius: 100px;
-  padding: 5px;
   width: 200px;
   justify-content: space-between;
   display: flex;
+  align-items: center;
   cursor: pointer;
+  height: 56.6px;
+  padding-left: 15px;
 }
 
 .arrow-icon {
@@ -58,6 +60,7 @@ nav {
   color: white;
   border-radius: 100px;
   padding: 10px;
+  margin-right: 1px;
 }
 
 .navbar-btn {
