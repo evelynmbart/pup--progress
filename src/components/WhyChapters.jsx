@@ -1,3 +1,4 @@
+import { CiCirclePlus } from "react-icons/ci";
 import "../css/WhyChapters.css";
 import Arrow from "./Arrow";
 import Bullet from "./Bullet";
@@ -34,7 +35,25 @@ export default function WhyChapters() {
             </span>
           </div>
         </div>
-        <div className="right"></div>
+        <div className="right">
+          <div className="right-top">
+            <div className="right-top-left">
+              <CiCirclePlus className="circle-plus" id="circle-plus-1" />
+              <h3>Learning Guide</h3>
+            </div>
+            <div className="right-top-right">
+              <CiCirclePlus className="circle-plus" />
+              <h3>Attention to Details</h3>
+            </div>
+          </div>
+          <div className="right-bottom">
+            <h4>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+              quos.
+            </h4>
+            <Bullet>Read More</Bullet>
+          </div>
+        </div>
       </div>
     </div>
   );
