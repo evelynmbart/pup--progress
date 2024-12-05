@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { TiArrowRightOutline } from "react-icons/ti";
 import { Link } from "react-router-dom";
 import "../css/Navbar.css";
+import Arrow from "./Arrow";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -40,7 +40,7 @@ export default function Navbar() {
       </div>
       <div className="navbar-right">
         <button className="navbar-btn">Contact Us</button>
-        <TiArrowRightOutline className="arrow-icon" size={32} />
+        <Arrow />
       </div>
       <button
         className={`hamburger ${isMenuOpen ? "active" : ""}`}

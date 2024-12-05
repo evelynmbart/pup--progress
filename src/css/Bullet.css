@@ -1,0 +1,9 @@
+.bullet {
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: rgb(150, 222, 222);
+  text-align: center;
+  padding: 0.2rem;
+  border-radius: 100px;
+  width: 100px;
+}
