@@ -27,7 +27,7 @@
 
 .freestyle-left h1 {
   font-size: 2.5rem;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.05rem;
   font-weight: 600;
   text-align: center;
   margin-top: 20px;
@@ -45,7 +45,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 175px;
+  height: 150px;
 }
 
 h5 {

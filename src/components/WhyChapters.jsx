@@ -39,7 +39,7 @@ export default function WhyChapters() {
           <div className="right-top">
             <div className="right-top-left">
               <CiCirclePlus className="circle-plus" id="circle-plus-1" />
-              <h3>Learning Guide</h3>
+              <h3 id="first-h3">Discipline & Routine</h3>
             </div>
             <div className="right-top-right">
               <CiCirclePlus className="circle-plus" />
