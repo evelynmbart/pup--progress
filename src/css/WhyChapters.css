@@ -63,6 +63,7 @@ h1 {
   height: 75%;
   border-radius: 20px;
   position: relative;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
 }
 
 .left-image-text {
@@ -101,6 +102,7 @@ h1 {
   background-color: rgba(150, 222, 222, 0.8);
   width: 50%;
   border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
 }
 
 .circle-plus {
@@ -152,6 +154,7 @@ h1 {
   background-position: center;
   background-repeat: no-repeat;
   width: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
 }
 
 .right-bottom {
@@ -172,6 +175,7 @@ h1 {
   background-color: rgba(255, 255, 255, 0.457);
   padding: 20px;
   border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
 }
 
 .right-bottom-text .bullet {
