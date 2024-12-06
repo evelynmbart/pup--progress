@@ -8,9 +8,9 @@ export default function WhyChapters() {
       <div className="top">
         <div className="top-left">
           <Bullet>Chapters</Bullet>
-          <p>Explore Tricks, Training, and more</p>
+          <p>Be Guided Through Tricks, Training, and more</p>
         </div>
-        <h1>Why Chapters?</h1>
+        <h1>How do Chapters work?</h1>
       </div>
       <div className="bottom">
         <div className="left">
@@ -43,7 +43,7 @@ export default function WhyChapters() {
             </div>
             <div className="right-top-right">
               <CiCirclePlus className="circle-plus" />
-              <h3>Bonding</h3>
+              <h3 id="second-h3">Bonding</h3>
             </div>
           </div>
           <div className="right-bottom">

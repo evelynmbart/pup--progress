@@ -2,8 +2,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: white;
-  padding-top: 4%;
+  background: linear-gradient(to top, white, rgba(150, 222, 222, 0.1));
+  padding: 7% 0;
 }
 
 .freestyle-left {
@@ -11,7 +11,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-
   width: 50%;
   height: 500px;
   gap: 15px;
@@ -70,44 +69,114 @@ h5 {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
   border-radius: 20px;
+  position: relative;
 }
 
 .freestyle-right-text {
+  position: absolute;
+  bottom: -40px;
+  right: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 30px;
-  color: black;
-  background-color: rgba(255, 255, 255, 0.4);
+  justify-content: center;
+  color: #333;
+  /* background-color: rgba(255, 255, 255, 0.85); */
+  backdrop-filter: blur(50px);
   border-radius: 20px;
-  height: 100%;
   text-align: center;
-  gap: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .freestyle-right-text p {
-  padding: 0 10px;
+  padding: 0 1rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 100%;
+  margin: 0 auto;
 }
-.freestyle-right-btn {
-  gap: 20px;
-  backdrop-filter: blur(10px);
 
-  border-radius: 100px;
-  width: 200px;
-  justify-content: space-between;
+.freestyle-right-btn {
   display: flex;
   align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border-radius: 100px;
+  height: 3rem;
   cursor: pointer;
-  height: 56.6px;
-  padding-left: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.freestyle-right-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .freestyle-right-btn button {
   background-color: transparent;
   border: none;
   border-radius: 100px;
-  padding: 10px;
-  font-size: 16px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.freestyle-right-btn button:hover {
+  color: rgb(150, 222, 222);
+}
+
+@media screen and (max-width: 768px) {
+  .freestyle-right-text {
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+
+  .freestyle-right-text p {
+    font-size: 1rem;
+  }
+
+  .freestyle-right-btn {
+    height: 3rem;
+    padding: 0.4rem 1.2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .why-freestyle-container {
+    flex-direction: column;
+    padding: 10% 4%;
+    gap: 2rem;
+  }
+
+  .freestyle-left,
+  .freestyle-right {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .freestyle-left h1 {
+    font-size: 2rem;
+    width: 100%;
+  }
+
+  .freestyle-right {
+    height: 400px;
+    margin-right: 0;
+  }
+
+  .freestyle-left-bottom p {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .freestyle-left h1 {
+    font-size: 1.5rem;
+  }
 }
