@@ -8,9 +8,8 @@ export default function WhyChapters() {
       <div className="top">
         <div className="top-left">
           <Bullet>Chapters</Bullet>
-          <p>Be Guided Through Tricks, Training, and more</p>
         </div>
-        <h1>How do Chapters work?</h1>
+        <h1>Be Guided Through Tricks, Training, and more</h1>
       </div>
       <div className="bottom">
         <div className="left">
