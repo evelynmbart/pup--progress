@@ -1,5 +1,4 @@
 import "../css/WhyFreestyle.css";
-import Arrow from "./Arrow";
 import Bullet from "./Bullet";
 import Button from "./Button";
 
@@ -30,10 +29,6 @@ export default function WhyFreestyle() {
           <div className="freestyle-right-text">
             <h4>Services & Support</h4>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <div className="freestyle-right-btn">
-              <button>Get Started</button>
-              <Arrow />
-            </div>
           </div>
         </div>
       </div>
