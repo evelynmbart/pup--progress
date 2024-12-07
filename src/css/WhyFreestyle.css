@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   background: linear-gradient(to top, white, rgba(150, 222, 222, 0.1));
-  padding: 7% 0;
+  padding: 4% 0;
 }
 
 .freestyle-left {
@@ -30,7 +30,7 @@
   letter-spacing: 0.05rem;
   font-weight: 600;
   text-align: center;
-  margin-top: 40px;
+
   width: 80%;
   font-family: "Poppins", sans-serif;
 }
@@ -45,17 +45,47 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 150px;
+  background-color: rgba(150, 222, 171, 0.6);
+  border-radius: 20px;
+  padding: 30px 10px;
+  width: 75%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
 }
 
 h5 {
-  font-size: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
 }
 
 .freestyle-left-bottom p {
   width: 75%;
   text-align: center;
   margin-top: 10px;
+}
+
+.carousel-btns {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.btn {
+  width: 200px;
+  height: 50px;
+  border-radius: 30px;
+  background-color: rgb(150, 222, 222);
+  cursor: pointer;
+  font-size: 1rem;
+  border: none;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
+  transition: all 0.3s ease;
+}
+
+.btn.active {
+  background-color: #ff6b6b;
+
+  transform: scale(0.9);
 }
 
 .freestyle-right {
