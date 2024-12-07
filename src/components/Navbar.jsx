@@ -39,7 +39,9 @@ export default function Navbar() {
         </div>
       </div>
       <div className="navbar-right">
-        <button className="navbar-btn">Contact Us</button>
+        <a className="navbar-btn" href="mailto:pupprogress@gmail.com">
+          Contact Us
+        </a>
         <Arrow />
       </div>
       <button
