@@ -12,11 +12,13 @@ export default function Navbar() {
   return (
     <nav className="navbar-container">
       <div className="navbar-left">
-        <img
-          className="logo"
-          src="./pup-progress-logo.png"
-          alt="pup progress logo"
-        />
+        <Link to="/" className="logo-link">
+          <img
+            className="logo"
+            src="./pup-progress-logo.png"
+            alt="pup progress logo"
+          />
+        </Link>
       </div>
       <div className={`navbar-links ${isMenuOpen ? "active" : ""}`}>
         <Link

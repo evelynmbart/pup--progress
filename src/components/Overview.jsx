@@ -1,6 +1,6 @@
+import { Link } from "react-router-dom";
 import "../css/Overview.css";
 import Navbar from "./Navbar";
-
 export default function Overview() {
   return (
     <div className="overview-container">
@@ -14,9 +14,9 @@ export default function Overview() {
           and lasting bonds. Join thousands of happy pet parents who've
           discovered the joy of raising a perfectly trained puppy.
         </p>
-        <a href="#get-started" className="overview-cta">
+        <Link to="/chapters" className="overview-cta">
           Start Your Journey Today
-        </a>
+        </Link>
       </div>
     </div>
   );
