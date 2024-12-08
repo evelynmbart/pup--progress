@@ -217,6 +217,7 @@ h1 {
 
 .right-bottom-text {
   display: flex;
+  font-size: 2rem;
   flex-direction: column;
   gap: 30px;
   padding: 30px;

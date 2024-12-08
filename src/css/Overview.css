@@ -1,6 +1,6 @@
 .overview-container {
   background-image: url("../../training7.png");
-  height: 80vh;
+  height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -17,7 +17,7 @@
   color: white;
   max-width: 600px;
   padding: 0 8%;
-  margin-top: 80px;
+  margin-top: 120px;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -75,7 +75,7 @@
 }
 
 .overview-subtitle {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   margin-bottom: 2rem;
   line-height: 1.6;
   opacity: 0.9;
@@ -88,6 +88,7 @@
   padding: 1rem 2rem;
   border-radius: 30px;
   text-decoration: none;
+  font-size: 1.2rem;
   font-weight: 600;
   display: inline-block;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -128,13 +129,10 @@
 }
 
 @media screen and (max-width: 768px) {
-  .overview-container {
-    height: 100vh;
-  }
-
   .overview-content {
     padding: 0 5%;
-    margin-top: 60px;
+    margin-top: 100px;
+    max-width: 100%;
   }
 
   .overview-title {
@@ -147,16 +145,44 @@
 }
 
 @media screen and (max-width: 480px) {
+  .overview-content {
+    margin-top: 80px;
+    padding: 0 1rem;
+  }
+
   .overview-title {
     font-size: 2rem;
   }
 
   .overview-subtitle {
     font-size: 1rem;
+    margin-bottom: 1.5rem;
   }
 
   .overview-cta {
     padding: 0.8rem 1.5rem;
     font-size: 0.9rem;
+    width: 90%;
+    text-align: center;
+  }
+
+  .overview-container {
+    border-radius: 0 0 0 20px;
+  }
+}
+
+@media screen and (max-height: 600px) {
+  .overview-content {
+    margin-top: 80px;
+    justify-content: flex-start;
+  }
+
+  .overview-title {
+    font-size: 2rem;
+  }
+
+  .overview-subtitle {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
   }
 }
