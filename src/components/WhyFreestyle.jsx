@@ -75,7 +75,10 @@ export default function WhyFreestyle() {
         <div className="freestyle-right-image">
           <div className="freestyle-right-text">
             <h4>Services & Support</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p>
+              Comprehensive training programs tailored to your dog's unique
+              needs and personality.
+            </p>
           </div>
         </div>
       </div>

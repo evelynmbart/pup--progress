@@ -81,6 +81,8 @@ h5 {
   width: 75%;
   text-align: center;
   margin-top: 10px;
+  font-size: 1.4rem;
+  font-weight: 400;
 }
 
 .carousel-btns {
@@ -159,22 +161,24 @@ h5 {
   border-radius: 20px;
   margin-top: 20px;
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
   margin-left: 4%;
+  z-index: 100;
+  font-family: "Inter", serif;
+  letter-spacing: 0.05rem;
 }
 
 .freestyle-right-text > h4 {
-  font-size: 4rem;
+  font-size: 5rem;
   font-weight: 600;
-  width: 80%;
+  width: 100%;
 }
 .freestyle-right-text > p {
   font-size: 1.5rem;
-  width: 500px;
+  width: 600px;
   font-weight: 400;
   line-height: 1.6;
-  max-width: 100%;
 
   transition: font-size 0.3s ease;
 }
@@ -218,7 +222,7 @@ h5 {
   }
 
   .freestyle-left h1 {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
     width: 100%;
     margin-bottom: 1rem;
   }
@@ -232,12 +236,6 @@ h5 {
     margin-top: 2rem;
     padding: 1.5rem;
     width: 90%;
-  }
-
-  .freestyle-right-text > h4 {
-    font-size: 2.5rem;
-    width: 100%;
-    margin-bottom: 1rem;
   }
 
   .freestyle-right-text > p {

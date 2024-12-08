@@ -229,13 +229,6 @@ h1 {
   width: 160px;
 }
 
-h4 {
-  font-size: 1.8rem;
-  font-weight: 500;
-  line-height: 1.4;
-  color: #2c3e50;
-}
-
 @media screen and (max-width: 768px) {
   .why-chapters-container {
     padding: 10% 4%;
