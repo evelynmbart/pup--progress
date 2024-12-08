@@ -8,7 +8,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 10px 10px rgba(0, 0, 0, 0.2);
 }
 
 .overview-content {
@@ -22,6 +22,20 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .overview-container::before {
@@ -31,7 +45,12 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4));
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.376) 0%,
+    rgba(0, 0, 0, 0.7) 50%,
+    rgba(0, 0, 0, 0.4) 100%
+  );
   border-radius: 0 0 0 40px;
 }
 
@@ -40,6 +59,19 @@
   font-weight: 700;
   margin-bottom: 1.5rem;
   line-height: 1.2;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.overview-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(to right, #ff6b6b, rgb(150, 222, 222));
+  border-radius: 2px;
 }
 
 .overview-subtitle {
@@ -47,22 +79,52 @@
   margin-bottom: 2rem;
   line-height: 1.6;
   opacity: 0.9;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .overview-cta {
-  background-color: #ff6b6b;
+  background: linear-gradient(135deg, #ff6b6b, #ff5252);
   color: white;
   padding: 1rem 2rem;
   border-radius: 30px;
   text-decoration: none;
   font-weight: 600;
   display: inline-block;
-  transition: transform 0.2s ease, background-color 0.2s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 10px 20px rgba(255, 107, 107, 0.3), 0 6px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  align-self: flex-start;
 }
 
 .overview-cta:hover {
-  background-color: #ff5252;
-  transform: translateY(-2px);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(255, 107, 107, 0.4),
+    0 8px 8px rgba(0, 0, 0, 0.15);
+}
+
+.overview-cta:active {
+  transform: translateY(-1px) scale(0.98);
+}
+
+.overview-cta::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: 0.5s;
+}
+
+.overview-cta:hover::before {
+  left: 100%;
 }
 
 @media screen and (max-width: 768px) {

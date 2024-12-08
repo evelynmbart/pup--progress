@@ -29,6 +29,7 @@
   position: relative;
   max-width: 600px;
   margin: 0 auto 2rem auto;
+  width: 90%;
 }
 
 .search-input {
@@ -39,6 +40,7 @@
   font-size: 1.1rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.2s;
+  box-sizing: border-box;
 }
 
 .search-input:focus {
@@ -48,7 +50,7 @@
 
 .search-icon {
   position: absolute;
-  right: -50px;
+  right: 1.2rem;
   top: 50%;
   transform: translateY(-50%);
   font-size: 1.2rem;
@@ -114,6 +116,20 @@
 
   .tricks-masonry {
     grid-template-columns: 1fr;
+  }
+
+  .search-container {
+    width: 95%;
+  }
+
+  .search-input {
+    padding: 0.8rem 2.5rem 0.8rem 1.2rem;
+    font-size: 1rem;
+  }
+
+  .search-icon {
+    font-size: 1rem;
+    right: 1rem;
   }
 }
 

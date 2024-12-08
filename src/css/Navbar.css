@@ -12,6 +12,11 @@ nav {
 
 .logo {
   width: 150px;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
 }
 
 .navbar-left {
@@ -27,30 +32,55 @@ nav {
 
 .navbar-links {
   display: flex;
-  background-color: white;
+  background: rgba(255, 255, 255, 0.95);
   padding: 1rem 2rem;
   border-radius: 100px;
   align-items: center;
   gap: 50px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   position: relative;
   z-index: 102;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar-links:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15), 0 8px 8px rgba(0, 0, 0, 0.1);
 }
 
 .link {
   text-decoration: none;
-  color: black;
+  color: #2c3e50;
   font-weight: 500;
+  position: relative;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease;
 }
 
-.link:hover,
-.navbar-btn:hover {
-  color: rgb(150, 222, 222);
+.link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(to right, rgb(150, 222, 222), #ff6b6b);
+  transition: width 0.3s ease;
+}
+
+.link:hover {
+  color: #ff6b6b;
+}
+
+.link:hover::after {
+  width: 100%;
 }
 
 .navbar-right {
   gap: 20px;
-  background-color: white;
+  background: rgba(255, 255, 255, 0.95);
   border-radius: 100px;
   width: 200px;
   justify-content: space-between;
@@ -59,17 +89,30 @@ nav {
   cursor: pointer;
   height: 56.6px;
   padding-left: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar-right:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15), 0 8px 8px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-btn {
-  background-color: white;
+  background: transparent;
   border: none;
   border-radius: 100px;
   padding: 10px;
   font-size: 16px;
-  color: black;
+  color: #2c3e50;
   text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar-btn:hover {
+  color: #ff6b6b;
 }
 
 .hamburger {
